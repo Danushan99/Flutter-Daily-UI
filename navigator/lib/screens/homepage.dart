@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:navigator/screens/details.dart';
 import './homepage.dart';
 
 class HomePage extends StatelessWidget {
@@ -21,11 +22,14 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(fontSize: 18),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => DeatailPage()));
+                },
                 child: Text('Go Next'),
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12), // <-- Radius
+                    borderRadius: BorderRadius.circular(12),
                   ),
                 ),
               )

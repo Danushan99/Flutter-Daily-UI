@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigator/screens/homepage.dart';
 
 class DeatailPage extends StatelessWidget {
   const DeatailPage({Key? key}) : super(key: key);
@@ -18,7 +19,10 @@ class DeatailPage extends StatelessWidget {
                 style: TextStyle(fontSize: 18),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
+                },
                 child: const Text('Go Home'),
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
