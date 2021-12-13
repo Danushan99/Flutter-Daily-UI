@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import './homepage.dart';
 
@@ -7,16 +9,28 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: const Text("Homepage"),
+        ),
         body: Center(
-      child: Column(
-        children: [
-          Text("Home Page"),
-          RaisedButton(
-            onPressed: null,
-            child: Text("go deatails"),
-          )
-        ],
-      ),
-    ));
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                "This Is Our Home Page ",
+                style: TextStyle(fontSize: 18),
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: Text('Go Next'),
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12), // <-- Radius
+                  ),
+                ),
+              )
+            ],
+          ),
+        ));
   }
 }
