@@ -22,7 +22,7 @@ class DeatailPage extends StatelessWidget {
                 child: const Text('Go Home'),
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12), // <-- Radius
+                    borderRadius: BorderRadius.circular(12),
                   ),
                 ),
               )
