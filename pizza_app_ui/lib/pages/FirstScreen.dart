@@ -76,6 +76,9 @@ class _FirstScreenState extends State<FirstScreen> {
                 ),
                 const SizedBox(
                   height: 30,
+                ),
+                Align(
+                  child: Text(""),
                 )
               ],
             ),
