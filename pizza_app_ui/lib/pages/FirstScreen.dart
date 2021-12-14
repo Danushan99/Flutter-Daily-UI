@@ -37,18 +37,18 @@ class _FirstScreenState extends State<FirstScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.end,
-              children: const [
-                Text(
+              children: [
+                const Text(
                   "Take Your order by free delevery",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 45,
                       fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   "see the location \nmore info",
                   style: TextStyle(
                       color: Colors.white,
@@ -56,9 +56,27 @@ class _FirstScreenState extends State<FirstScreen> {
                       height: 1.4,
                       fontWeight: FontWeight.normal),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    gradient:
+                        LinearGradient(colors: [Colors.yellow, Colors.orange]),
+                  ),
+                  child: MaterialButton(
+                    minWidth: double.infinity,
+                    onPressed: null,
+                    child: Text(
+                      "Start",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                )
               ],
             ),
           ),

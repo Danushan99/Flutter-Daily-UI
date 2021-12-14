@@ -20,15 +20,14 @@ class DeatailPage extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomePage()));
+                  Navigator.pop(context);
                 },
-                child: const Text('Go Home'),
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
+                child: Icon(Icons.favorite),
+                // style: ElevatedButton.styleFrom(
+                //   shape: RoundedRectangleBorder(
+                //     borderRadius: BorderRadius.circular(12),
+                //   ),
+                // ),
               )
             ],
           ),
