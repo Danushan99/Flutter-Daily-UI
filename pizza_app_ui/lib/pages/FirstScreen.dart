@@ -64,7 +64,8 @@ class _FirstScreenState extends State<FirstScreen> {
                     borderRadius: BorderRadius.circular(10),
                     gradient:
                         // ignore: prefer_const_literals_to_create_immutables
-                        const LinearGradient(colors: [Colors.yellow, Colors.orange]),
+                        const LinearGradient(
+                            colors: [Colors.yellow, Colors.orange]),
                   ),
                   child: const MaterialButton(
                     minWidth: double.infinity,
@@ -86,7 +87,7 @@ class _FirstScreenState extends State<FirstScreen> {
                 ),
                 const SizedBox(
                   height: 30,
-                )
+                ),
               ],
             ),
           ),
