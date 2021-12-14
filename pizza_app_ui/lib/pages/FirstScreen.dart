@@ -63,7 +63,8 @@ class _FirstScreenState extends State<FirstScreen> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     gradient:
-                        LinearGradient(colors: [Colors.yellow, Colors.orange]),
+                        // ignore: prefer_const_literals_to_create_immutables
+                        const LinearGradient(colors: [Colors.yellow, Colors.orange]),
                   ),
                   child: const MaterialButton(
                     minWidth: double.infinity,
@@ -77,8 +78,14 @@ class _FirstScreenState extends State<FirstScreen> {
                 const SizedBox(
                   height: 30,
                 ),
-                Align(
-                  child: Text(""),
+                const Align(
+                  child: Text(
+                    "Now Delever to yor door 24/7",
+                    style: TextStyle(color: Colors.white70),
+                  ),
+                ),
+                const SizedBox(
+                  height: 30,
                 )
               ],
             ),
