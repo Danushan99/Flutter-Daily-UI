@@ -65,7 +65,7 @@ class _FirstScreenState extends State<FirstScreen> {
                     gradient:
                         LinearGradient(colors: [Colors.yellow, Colors.orange]),
                   ),
-                  child: MaterialButton(
+                  child: const MaterialButton(
                     minWidth: double.infinity,
                     onPressed: null,
                     child: Text(
@@ -74,7 +74,7 @@ class _FirstScreenState extends State<FirstScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 )
               ],
