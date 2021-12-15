@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 
-class FadeAnimation extends StatefulWidget {
-  const FadeAnimation({Key? key}) : super(key: key);
+class FadeAnimation extends StatelessWidget {
+  late final double delay;
+  late final Widget child;
+  FadeAnimation(this.delay, this.child);
 
-  @override
-  _FadeAnimationState createState() => _FadeAnimationState();
-}
-
-class _FadeAnimationState extends State<FadeAnimation> {
   @override
   Widget build(BuildContext context) {
     return Container();
