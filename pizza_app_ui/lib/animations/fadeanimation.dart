@@ -1,26 +1,26 @@
-// ignore_for_file: import_of_legacy_library_into_null_safe
+// ignore_for_file: use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 import 'package:simple_animations/simple_animations.dart';
 
 class FadeAnimation extends StatelessWidget {
-  late final double delay;
-  late final Widget child;
-  FadeAnimation(this.delay, this.child);
+  final double delay;
+  final Widget child;
+
+  const FadeAnimation(this.delay, this.child);
 
   @override
   Widget build(BuildContext context) {
     final tween = MultiTrackTween([
       Track('opacity')
-          .add(Duration(milliseconds: 500), Tween(begin: 0.0, end: 1.0)),
+          .add(const Duration(milliseconds: 500), Tween(begin: 0.0, end: 1.0)),
       Track('translateX').add(
-          Duration(milliseconds: 500), Tween(begin: 120.0, end: 0.0),
-          curve: Curves.easeOut),
+          const Duration(milliseconds: 500), Tween(begin: 120.0, end: 0.0),
+          curve: Curves.easeOut)
     ]);
     return ControlledAnimation(
-      delay: Duration(
-        milliseconds: (500 * delay).round(),
-      ),
+      delay: Duration(milliseconds: (500 * delay).round()),
+      duration: tween.duration,
       tween: tween,
       child: child,
       builderWithChild: (context, child, animation) => Opacity(

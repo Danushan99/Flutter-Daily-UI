@@ -2,9 +2,10 @@
 // ignore: avoid_web_libraries_in_flutter
 
 import 'package:flutter/material.dart';
+import 'package:pizza_app_ui/animations/fadeanimation.dart';
 
 class FirstScreen extends StatefulWidget {
-  const FirstScreen({Key? key}) : super(key: key);
+  const FirstScreen({Key key}) : super(key: key);
 
   @override
   _FirstScreenState createState() => _FirstScreenState();
@@ -38,41 +39,48 @@ class _FirstScreenState extends State<FirstScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                const Text(
-                  "Take Your order by free delevery",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 45,
-                      fontWeight: FontWeight.bold),
-                ),
+                const FadeAnimation(
+                    0.5,
+                    Text(
+                      "Take Your order by free delevery",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 45,
+                          fontWeight: FontWeight.bold),
+                    )),
                 const SizedBox(
                   height: 20,
                 ),
-                const Text(
-                  "see the location \nmore info",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      height: 1.4,
-                      fontWeight: FontWeight.normal),
-                ),
+                const FadeAnimation(
+                    1,
+                    Text(
+                      "see the location \n more info",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          height: 1.4,
+                          fontWeight: FontWeight.normal),
+                    )),
                 const SizedBox(
                   height: 20,
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    gradient:
-                        // ignore: prefer_const_literals_to_create_immutables
-                        const LinearGradient(
-                            colors: [Colors.yellow, Colors.orange]),
-                  ),
-                  child: const MaterialButton(
-                    minWidth: double.infinity,
-                    onPressed: null,
-                    child: Text(
-                      "Start",
-                      style: TextStyle(color: Colors.white),
+                FadeAnimation(
+                  1.2,
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      gradient:
+                          // ignore: prefer_const_literals_to_create_immutables
+                          const LinearGradient(
+                              colors: [Colors.yellow, Colors.orange]),
+                    ),
+                    child: const MaterialButton(
+                      minWidth: double.infinity,
+                      onPressed: null,
+                      child: Text(
+                        "Start",
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
                 ),
@@ -80,9 +88,12 @@ class _FirstScreenState extends State<FirstScreen> {
                   height: 30,
                 ),
                 const Align(
-                  child: Text(
-                    "Now Delever to yor door 24/7",
-                    style: TextStyle(color: Colors.white70),
+                  child: FadeAnimation(
+                    1.4,
+                    Text(
+                      "Now Delever to yor door 24/7",
+                      style: TextStyle(color: Colors.white70),
+                    ),
                   ),
                 ),
                 const SizedBox(
