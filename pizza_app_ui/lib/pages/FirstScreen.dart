@@ -1,8 +1,11 @@
 // ignore_for_file: file_names
 // ignore: avoid_web_libraries_in_flutter
 
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:pizza_app_ui/animations/fadeanimation.dart';
+import 'package:page_transition/page_transition.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({Key key}) : super(key: key);
@@ -11,7 +14,36 @@ class FirstScreen extends StatefulWidget {
   _FirstScreenState createState() => _FirstScreenState();
 }
 
-class _FirstScreenState extends State<FirstScreen> {
+class _FirstScreenState extends State<FirstScreen>
+    with TickerProviderStateMixin {
+  AnimationController _animationController;
+  Animation<double> _animation;
+  bool _textVisble = true;
+
+  @override
+  void initState() {
+    _animationController = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 100),
+    );
+    _animation =
+        Tween<double>(begin: 0.0, end: 25.0).animate(_animationController);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  void _ontap() {
+    setState(() {
+      _textVisble = false;
+    });
+    _animationController.forward().then((f) => Navigator.push(context, PageTransitions )))
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
